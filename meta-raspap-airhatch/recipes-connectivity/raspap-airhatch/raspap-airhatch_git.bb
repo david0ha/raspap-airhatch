@@ -12,7 +12,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=4fe869ee987a340198fb0d54c55c47f1"
 # another commit, the revision) in local.conf; the layer README describes
 # that and the release bump of the revision.
 RASPAP_AIRHATCH_GIT_URI ?= "git://github.com/david0ha/raspap-airhatch.git;protocol=https;branch=main"
-RASPAP_AIRHATCH_SRCREV ?= "36ec6ed82731f077eb46619344ade365053e647c"
+RASPAP_AIRHATCH_SRCREV ?= "ea3d03a8e10c6ad950515f2f426af2213546003f"
 
 SRC_URI = "${RASPAP_AIRHATCH_GIT_URI}"
 SRCREV = "${RASPAP_AIRHATCH_SRCREV}"
