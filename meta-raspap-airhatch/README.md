@@ -63,7 +63,7 @@ The recipe fetches its sources from
 With the `airhatch` distro feature:
 
 - **raspap-webgui**: `/etc/raspap/hostapd/servicestart.sh` (root 0750) is a
-  3-line shim that hands RaspAP's hotspot Start/Restart/Stop to
+  short exec shim that hands RaspAP's hotspot Start/Restart/Stop to
   `airhatchd servicestart`.
 
 The `raspap-airhatch` package also adds systemd drop-ins for `hostapd`,

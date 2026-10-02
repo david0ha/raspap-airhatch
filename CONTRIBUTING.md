@@ -42,7 +42,7 @@ RASPAP_GIT=/path/to/raspap-webgui plugin/tests/run.sh
 
 ## Shell
 
-Every shell script is bash with `set -euo pipefail` and must stay
+Every test script is bash with `set -euo pipefail`; all shell scripts must stay
 shellcheck-clean:
 
 ```
