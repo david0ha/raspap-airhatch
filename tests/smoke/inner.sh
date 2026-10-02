@@ -432,10 +432,12 @@ stray_supplicant_running() {
 
 # start_stray: RaspAP's Reinitialize (rm -f of the control socket, then
 # wpa_supplicant -i wlan0 … -B), with the wired driver so it runs on veth.
+# The daemon may reap the stray before this function returns, so a
+# successful -B start is the evidence; the next check asserts the reap.
 start_stray() {
     rm -f "$SUPPLICANT_SOCKET"
     wpa_supplicant -i wlan0 -D wired -c /etc/wpa_supplicant/wpa_supplicant.conf \
-        -I "$SMOKE_RUN/wired.conf" -B >/dev/null && stray_supplicant_running
+        -I "$SMOKE_RUN/wired.conf" -B >/dev/null
 }
 
 no_stray_supplicant() {
