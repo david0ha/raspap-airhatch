@@ -1,0 +1,7 @@
+# raspap-airhatch: only airhatchd starts wpa_supplicant (docs/integration.md
+# O8). RaspAP's 090_raspap lets www-data run /sbin/wpa_supplicant; sudo
+# applies the last matching entry, and this file is read after it, so those
+# starts are refused. NOPASSWD makes sudo refuse at once instead of asking
+# www-data for a password it does not have. airhatchd starts its own supplicant unit and restarts
+# it when RaspAP's "Reinitialize" deletes the control socket.
+www-data ALL=(ALL) NOPASSWD: !/sbin/wpa_supplicant, !/usr/sbin/wpa_supplicant

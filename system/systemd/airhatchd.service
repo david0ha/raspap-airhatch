@@ -1,0 +1,23 @@
+[Unit]
+Description=raspap-airhatch Wi-Fi client-first supervisor
+Wants=airhatch-firstboot.service
+After=airhatch-firstboot.service dhcpcd.service dnsmasq.service
+# Keep restarting: while airhatchd is down nobody owns wlan0.
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/airhatchd run
+# Fail closed: after a stop or a crash, close an AP left behind
+# (docs/DESIGN.md §5.4).
+ExecStopPost=/usr/sbin/airhatchd cleanup
+Restart=always
+RestartSec=2
+# The control-socket stand-in replies to wpa_cli's socket in the host /tmp,
+# and the scan-cache seed lives in RaspAP's /tmp/raspap (docs/DESIGN.md §4).
+PrivateTmp=no
+ProtectSystem=full
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target

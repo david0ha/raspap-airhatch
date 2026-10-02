@@ -1,0 +1,4 @@
+# airhatch: ap
+address=/#/10.3.141.1
+except-interface=lo
+dhcp-option=tag:wlan0,114,"http://10.3.141.1/captive-portal/api"

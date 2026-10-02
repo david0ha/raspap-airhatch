@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "state": "held",
+  "mode": "none",
+  "operation": null,
+  "override": "off",
+  "hold_until": "2026-10-01T12:15:00Z",
+  "saved_networks": 0,
+  "client": null,
+  "ap": null,
+  "timers": {"attempt_ends_at": null, "grace_ends_at": null, "retry_at": null,
+             "busy_retry_at": null, "handoff_at": null, "next_open_at": null, "backoff_s": 5},
+  "config": {"boot_timeout_s": 45, "connect_timeout_s": 45, "disconnect_grace_s": 60,
+             "retry_interval_s": 300, "retry_interval_busy_s": 900,
+             "handoff_delay_s": 5, "off_hold_s": 900},
+  "last_error": null,
+  "notices": [],
+  "credentials_file": null
+}

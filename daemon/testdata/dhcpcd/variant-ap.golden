@@ -1,0 +1,33 @@
+# Rendered by airhatchd render-dhcpcd from /etc/dhcpcd.conf (mode ap). Do not edit.
+# Hand-written in the syntax DhcpcdManager::buildConfigEx emits
+# (U:src/RaspAP/Networking/Hotspot/DhcpcdManager.php:171-203): an eth0 block,
+# a wlan0 block with a metric and a fallback profile, and a second wlan0 block.
+# RaspAP default configuration
+hostname
+clientid
+persistent
+option rapid_commit
+option domain_name_servers, domain_name, domain_search, host_name
+option classless_static_routes
+option ntp_servers
+require dhcp_server_identifier
+slaac private
+nohook lookup-hostname
+
+# RaspAP eth0 configuration
+denyinterfaces wlan0
+interface eth0
+static ip_address=192.168.50.10/24
+static routers=192.168.50.1
+static domain_name_servers=192.168.50.1
+metric 202
+gateway
+
+
+# RaspAP wlan0 configuration
+profile static_wlan0
+fallback static_wlan0
+nogateway
+
+
+# RaspAP wlan0 configuration

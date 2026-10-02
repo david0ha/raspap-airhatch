@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "state": "connecting",
+  "mode": "client",
+  "operation": {"name": "client_attempt", "started_at": "2026-10-01T12:00:00Z"},
+  "override": "auto",
+  "hold_until": null,
+  "saved_networks": 1,
+  "client": {"ssid": "Office", "ipv4": null},
+  "ap": null,
+  "timers": {"attempt_ends_at": "2026-10-01T12:00:45Z", "grace_ends_at": null, "retry_at": null,
+             "busy_retry_at": null, "handoff_at": null, "next_open_at": null, "backoff_s": 5},
+  "config": {"boot_timeout_s": 45, "connect_timeout_s": 45, "disconnect_grace_s": 60,
+             "retry_interval_s": 300, "retry_interval_busy_s": 900,
+             "handoff_delay_s": 5, "off_hold_s": 900},
+  "last_error": null,
+  "notices": [],
+  "credentials_file": null
+}

@@ -1,0 +1,19 @@
+add table inet airhatch
+delete table inet airhatch
+table inet airhatch {
+  chain prerouting {
+    type nat hook prerouting priority dstnat; policy accept;
+    iifname "wlan0" udp dport 53 redirect to :53
+    iifname "wlan0" tcp dport 53 redirect to :53
+    iifname "wlan0" tcp dport 80 redirect to :8099
+  }
+  chain input {
+    type filter hook input priority filter; policy accept;
+    iifname "wlan0" tcp dport { 443, 853 } reject with tcp reset
+  }
+  chain forward {
+    type filter hook forward priority filter; policy accept;
+    iifname "wlan0" drop
+    oifname "wlan0" drop
+  }
+}

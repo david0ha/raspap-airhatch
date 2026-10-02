@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "state": "handoff",
+  "mode": "ap",
+  "operation": null,
+  "override": "auto",
+  "hold_until": null,
+  "saved_networks": 1,
+  "client": null,
+  "ap": {"ssid": "RaspAP-1A2B", "ipv4": "10.3.141.1/24", "stations": 1, "captive": false},
+  "timers": {"attempt_ends_at": null, "grace_ends_at": null, "retry_at": null,
+             "busy_retry_at": null, "handoff_at": "2026-10-01T12:00:05Z", "next_open_at": null, "backoff_s": 5},
+  "config": {"boot_timeout_s": 45, "connect_timeout_s": 45, "disconnect_grace_s": 60,
+             "retry_interval_s": 300, "retry_interval_busy_s": 900,
+             "handoff_delay_s": 5, "off_hold_s": 900},
+  "last_error": null,
+  "notices": [],
+  "credentials_file": null
+}

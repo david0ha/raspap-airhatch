@@ -1,0 +1,16 @@
+# Rendered by airhatchd render-dhcpcd from /etc/dhcpcd.conf (mode client). Do not edit.
+# RaspAP default configuration
+hostname
+clientid
+persistent
+option rapid_commit
+option domain_name_servers, domain_name, domain_search, host_name
+option classless_static_routes
+option ntp_servers
+require dhcp_server_identifier
+slaac private
+nohook lookup-hostname
+
+# RaspAP wlan0 configuration
+interface wlan0
+nohook wpa_supplicant

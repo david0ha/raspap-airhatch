@@ -1,0 +1,14 @@
+[Unit]
+Description=raspap-airhatch per-device RaspAP credentials
+ConditionPathExists=!/etc/airhatch/firstboot.done
+RequiresMountsFor=/boot /etc
+After=local-fs.target systemd-tmpfiles-setup.service sys-subsystem-net-devices-wlan0.device
+Before=hostapd.service lighttpd.service php-fpm.service airhatchd.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/sbin/airhatchd firstboot
+
+[Install]
+WantedBy=multi-user.target

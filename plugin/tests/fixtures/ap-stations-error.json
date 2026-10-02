@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "state": "ap",
+  "mode": "ap",
+  "operation": null,
+  "override": "auto",
+  "hold_until": null,
+  "saved_networks": 1,
+  "client": null,
+  "ap": {"ssid": "RaspAP-1A2B<img src=x onerror=alert(1)>", "ipv4": "10.3.141.1/24", "stations": 2, "captive": true},
+  "timers": {"attempt_ends_at": null, "grace_ends_at": null, "retry_at": "2026-10-01T12:05:00Z",
+             "busy_retry_at": "2026-10-01T12:15:00Z", "handoff_at": null, "next_open_at": null, "backoff_s": 5},
+  "config": {"boot_timeout_s": 45, "connect_timeout_s": 45, "disconnect_grace_s": 60,
+             "retry_interval_s": 300, "retry_interval_busy_s": 900,
+             "handoff_delay_s": 5, "off_hold_s": 5400},
+  "last_error": {"code": "wrong_password", "message": "The password for \"Home & <Garden>\" was rejected.", "at": "2026-10-01T11:59:30Z"},
+  "notices": ["dnsmasq_stopped_outside_airhatch"],
+  "credentials_file": "/boot/raspap-airhatch.txt"
+}

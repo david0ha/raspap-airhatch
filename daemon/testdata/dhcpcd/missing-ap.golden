@@ -1,0 +1,2 @@
+# Rendered by airhatchd render-dhcpcd from /etc/dhcpcd.conf (mode ap). Do not edit.
+denyinterfaces wlan0
